@@ -1,4 +1,6 @@
 
+#czesc tomek, pojawiłem sie u góry! Jesteś super kolega
+
 class Osoba
   def initialize(imie, nazwisko, data_urodzenia)
     @imie = imie
