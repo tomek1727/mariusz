@@ -11,22 +11,11 @@ load 'wykladowca.rb'
 
 
 
+$wydzialy = []
+def menu
+  puts "Baza danych uczelni"
+  puts "1.Wyświetl wydziały"
+  puts "2.Dodaj Wydział"
+  puts "3.Przejdz do wydziału"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-andrzej = Student.new("Andrzej", "Bisewski", "05.28.1999", "Informatyka", "Dziennikarstwo", 2019, 18, 3)
-tomek = Wykladowca.new("Tomek", "Czajkowski", "03.03.1980", "Profesor", "Dziekan")
-
-andrzej.wypisz_info
-tomek.wypisz_info
+end 
