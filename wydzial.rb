@@ -22,7 +22,7 @@ class Wydział
     w =
     @jednostki.each do |x|
       if x.nazwa = stara
-       w = x.przenieswykladowce(imie, nazwisko)
+       w = x.usunwykladowce(imie, nazwisko)
 
      end
    end
@@ -33,9 +33,17 @@ class Wydział
    end
   end
   def dodajocene(student, przedmiot, ocena, data)
-    @studenci.each do |x|
-      if x.nr_indeksu == student
-        x.dodajocene(przedmiot, ocena, data)
+    czyjest = false
+    @przedmioty.each do |y|
+      if y.nazwa == przedmiot
+        czyjest = true
+      end
+    end
+    if czyjest
+      @studenci.each do |x|
+        if x.nr_indeksu == student
+          x.dodajocene(przedmiot, ocena, data)
+        end
       end
     end
   end

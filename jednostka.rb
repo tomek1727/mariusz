@@ -12,22 +12,13 @@ class Jednostka
   def dodajwykladowce(teacher)
     @wykladowcy << teacher
   end
-  def usunwykladowce(imie, nazwisko)
-    i = 0
-    @wykladowcy.each do |x|
-      if x.imie == imie and x.nazwisko == nazwisko
-        @wykladowcy.delete_at(i)
-        break;
-      end
-      i += 1
-    end
-  end
+
   def infowykladowcy()
     @wykladowcy.each do |x|
       x.wypisz_info
     end
   end
-  def przenieswykladowce (imie, nazwisko)
+  def usunwykladowce (imie, nazwisko)
     i = 0
     @wykladowcy.each do |x|
       if x.imie == imie and x.nazwisko == nazwisko
