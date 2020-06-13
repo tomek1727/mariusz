@@ -13,3 +13,4 @@ class Przedmiot
     print "#{@semestr}".rjust(10)
     puts "#{@godzin}".rjust(10)
   end
+end

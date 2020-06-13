@@ -1,4 +1,10 @@
 class Wydział
+  def initialize()
+    @studenci = []
+    @jednostki = []
+    @przedmioty = []
+
+  end
   def dodajjednostke(nazwa, adres)
     jed = Jednostka.new(nazwa, adres)
     @jednostki << jed
@@ -79,12 +85,12 @@ class Wydział
 
   def infostudenci(oceny)
     print "Imie".rjust(10)
-    print "Nazwisko".rjust(15)
-    print "Numer Indeksu".rjust(15)
-    print "Data Urodzenia".rjust(10)
+    print "Nazwisko".rjust(20)
+    print "Numer Indeksu".rjust(20)
+    print "Data Urodzenia".rjust(20)
+    print "Rok".rjust(10)
     print "Kierunek".rjust(10)
     print "Specjalizacja".rjust(10)
-    print "Rok".rjust(10)
     puts "Grupa".rjust(10)
     @studenci.each do |x|
       x.wypisz_info()

@@ -12,13 +12,13 @@ class Student < Osoba
 
   def wypisz_info
     print "#{@imie}".rjust(10)
-    print "#{@nazwisko}".rjust(15)
-    print "#{@nr_indeksu}".rjust(15)
-    print "#{@data_urodzenia}".rjust(10)
+    print "#{@nazwisko}".rjust(20)
+    print "#{@nr_indeksu}".rjust(20)
+    print "#{@data_urodzenia}".rjust(20)
     print "#{@rok}".rjust(10)
     print "#{@kierunek}".rjust(10)
     print "#{@specjalnosc}".rjust(10)
-    print "#{@grupa}".rjust(10)
+    puts "#{@grupa}".rjust(10)
   end
 
   def dodajocene(przedmiot, ocena, data)
