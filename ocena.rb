@@ -6,6 +6,6 @@ class Ocenakoncowa
   end
 
   def wypisz_info
-    puts "#{x.przedmiot}   #{x.ocena}   #{x.data}"
+    puts "#{@przedmiot}   #{@ocena}   #{@data}"
   end
 end
