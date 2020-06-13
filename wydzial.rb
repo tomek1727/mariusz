@@ -57,7 +57,7 @@ class Wydział
       i += 1
     end
   end
-  def infostudenci()
+  def infostudenci(oceny)
     print "Imie".rjust(10)
     print "Nazwisko".rjust(15)
     print "Numer Indeksu".rjust(15)
@@ -68,13 +68,20 @@ class Wydział
     puts "Grupa".rjust(10)
     @studenci.each do |x|
       x.wypisz_info()
+      if oceny = true
+        x.infooceny()
+      end
     end
   end
-  def infojednostki()
+  def infojednostki(wyklad)
     print "Nazwa".rjust(10)
     puts "Adres"
+
     @jednostki.each do |x|
       x.wypisz_info()
+      if wyklad
+        x.infowykladowcy()
+      end 
     end
   end
   def infoprzedmioty()
