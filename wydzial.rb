@@ -68,7 +68,7 @@ class Wydział
     puts "Grupa".rjust(10)
     @studenci.each do |x|
       x.wypisz_info()
-      if oceny = true
+      if oceny == true
         x.infooceny()
       end
     end
@@ -81,7 +81,7 @@ class Wydział
       x.wypisz_info()
       if wyklad
         x.infowykladowcy()
-      end 
+      end
     end
   end
   def infoprzedmioty()
