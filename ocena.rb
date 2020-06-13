@@ -5,7 +5,7 @@ class Ocenakoncowa
     @data = data
   end
 
-  attr_reader :przedmiot
-  attr_reader :ocena
-  attr_reader :data
+  def wypisz_info
+    puts "#{x.przedmiot}   #{x.ocena}   #{x.data}"
+  end
 end

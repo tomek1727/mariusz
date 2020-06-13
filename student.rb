@@ -29,8 +29,7 @@ class Student < Osoba
 
   def infooceny
     @oceny.each do |x|
-      puts "#{x.przedmiot}   #{x.ocena}   #{x.data}"
+      x.wypisz_info()
     end
   end
-
 end
