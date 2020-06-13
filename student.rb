@@ -12,7 +12,7 @@ class Student < Osoba
   attr_reader :nr_indeksu
 
   def wypisz_info
-    print "#{@imie}".rjust(10)
+    print "\n#{@imie}".rjust(10)
     print "#{@nazwisko}".rjust(20)
     print "#{@nr_indeksu}".rjust(20)
     print "#{@data_urodzenia}".rjust(20)
