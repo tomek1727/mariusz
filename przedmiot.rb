@@ -6,6 +6,7 @@ class Przedmiot
     @semestr = semestr
     @godzin = ilgodzin
   end
+
   def wypisz_info()
     print "#{@nazwa}".rjust(10)
     print "#{@kierunek}".rjust(10)

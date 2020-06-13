@@ -5,6 +5,7 @@ class Wydział
     @przedmioty = []
 
   end
+
   def dodajjednostke(nazwa, adres)
     jed = Jednostka.new(nazwa, adres)
     @jednostki << jed
@@ -36,16 +37,16 @@ class Wydział
     w = "wykładowca"
     @jednostki.each do |x|
       if x.nazwa == stara
-       w = x.usunwykladowce(imie, nazwisko)
+        w = x.usunwykladowce(imie, nazwisko)
 
-       end
-     end
-     if dodaj
-    @jednostki.each do |x|
-      if x.nazwa == nowa
-       x.dodajwykladowce(w)
-     end
+      end
     end
+    if dodaj
+      @jednostki.each do |x|
+        if x.nazwa == nowa
+          x.dodajwykladowce(w)
+        end
+      end
     end
   end
 
@@ -69,7 +70,6 @@ class Wydział
   end
 
 
-
   def usunstudenta(indeks)
     i = 0
     @studenci.each do |x|
@@ -80,7 +80,6 @@ class Wydział
       i += 1
     end
   end
-
 
 
   def infostudenci(oceny)
@@ -99,8 +98,6 @@ class Wydział
       end
     end
   end
-
-
 
 
   def infojednostki(wyklad)

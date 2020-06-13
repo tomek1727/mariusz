@@ -4,11 +4,14 @@ class Jednostka
     @adres = adres
     @wykladowcy = []
   end
+
   attr_reader :nazwa
+
   def nowywykladowca(imie, nazwisko, data, tytul, stanowisko)
     teacher = Wykladowca.new(imie, nazwisko, data, tytul, stanowisko)
     @wykladowcy << teacher
   end
+
   def dodajwykladowce(teacher)
     @wykladowcy << teacher
   end
@@ -18,6 +21,7 @@ class Jednostka
       x.wypisz_info
     end
   end
+
   def usunwykladowce (imie, nazwisko)
     i = 0
     @wykladowcy.each do |x|
@@ -29,6 +33,7 @@ class Jednostka
       i += 1
     end
   end
+
   def wypisz_info()
     print "#{@nazwa}".rjust(10)
     puts "#{@adres}"

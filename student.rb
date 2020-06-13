@@ -8,6 +8,7 @@ class Student < Osoba
     @nr_indeksu = nr_indeksu
     @oceny = []
   end
+
   attr_reader :nr_indeksu
 
   def wypisz_info
@@ -25,6 +26,7 @@ class Student < Osoba
     ocena = Ocenakoncowa.new(przedmiot, ocena, data)
     @oceny << ocena
   end
+
   def infooceny
     @oceny.each do |x|
       puts "#{x.przedmiot}   #{x.ocena}   #{x.data}"
