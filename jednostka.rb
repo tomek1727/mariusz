@@ -32,6 +32,7 @@ class Jednostka
       end
       i += 1
     end
+    nil
   end
 
   def wypisz_info()
