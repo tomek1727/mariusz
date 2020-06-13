@@ -34,13 +34,19 @@ class Wydział
 
 
   def przenieswykladowce(imie, nazwisko, stara, nowa, dodaj)
-    w = "wykładowca"
+    w = nil
     @jednostki.each do |x|
       if x.nazwa == stara
         w = x.usunwykladowce(imie, nazwisko)
 
       end
     end
+
+    if w == nil
+      puts 'Nie ma takiego wykładowcy'
+      return
+    end
+
     if dodaj
       @jednostki.each do |x|
         if x.nazwa == nowa
