@@ -10,7 +10,7 @@ load 'wykladowca.rb'
 
 
 def menu()
-  puts "Baza danych wydziału"
+  puts "\n\n\nBaza danych wydziału"
   puts "1.Wyświetl jednostki"
   puts "2.Dodaj jednostki"
   puts "3.Dodaj ocene"
@@ -28,7 +28,7 @@ def menu()
     puts "Czy wyswietlic też wykładowców?"
     puts "1.Tak"
     puts "2.Nie"
-    tn = $stdin.get.chomp
+    tn = $stdin.gets.chomp
     if tn == '1'
       $wsb.infojednostki(true)
     elsif tn == '2'
