@@ -1,5 +1,3 @@
-#czesc tomek, pojawiłem sie u góry! Jesteś super kolega
-
 load 'jednostka.rb'
 load 'ocena.rb'
 load 'osoba.rb'
