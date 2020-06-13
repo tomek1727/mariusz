@@ -3,14 +3,20 @@ class Wydział
     jed = Jednostka.new(nazwa, adres)
     @jednostki << jed
   end
+
+
   def dodajprzedmiot(nazwa, kierunek, specjalnosc, semestr, ilgodzin)
     prz = Przedmiot.new(nazwa, kierunek, specjalnosc, semestr, ilgodzin)
     @przedmioty << prz
   end
+
+
   def dodajstudenta(imie, nazwisko, data, kierunek, specjalizacja, rok, indeks, grupa)
     stu = Student.new(imie, nazwisko, data, kierunek, specjalizacja, rok, indeks, grupa)
     @studenci << stu
   end
+
+
   def dodajwykladowce(imie, nazwisko, data, tytul, stanowisko, jednostka)
     @jednostki.each do |x|
       if x.nazwa == jednostka
@@ -18,20 +24,26 @@ class Wydział
       end
     end
   end
-  def przenieswykladowce(imie, nazwisko, stara, nowa)
-    w =
+
+
+  def przenieswykladowce(imie, nazwisko, stara, nowa, dodaj)
+    w = "wykładowca"
     @jednostki.each do |x|
-      if x.nazwa = stara
+      if x.nazwa == stara
        w = x.usunwykladowce(imie, nazwisko)
 
+       end
      end
-   end
+     if dodaj
     @jednostki.each do |x|
       if x.nazwa == nowa
        x.dodajwykladowce(w)
      end
-   end
+    end
+    end
   end
+
+
   def dodajocene(student, przedmiot, ocena, data)
     czyjest = false
     @przedmioty.each do |y|
@@ -45,8 +57,13 @@ class Wydział
           x.dodajocene(przedmiot, ocena, data)
         end
       end
+    else
+      puts "Nie ma takiego przedmiotu"
     end
   end
+
+
+
   def usunstudenta(indeks)
     i = 0
     @studenci.each do |x|
@@ -57,6 +74,9 @@ class Wydział
       i += 1
     end
   end
+
+
+
   def infostudenci(oceny)
     print "Imie".rjust(10)
     print "Nazwisko".rjust(15)
@@ -73,6 +93,10 @@ class Wydział
       end
     end
   end
+
+
+
+
   def infojednostki(wyklad)
     print "Nazwa".rjust(10)
     puts "Adres"
@@ -84,6 +108,8 @@ class Wydział
       end
     end
   end
+
+
   def infoprzedmioty()
     print "Nazwa".rjust(10)
     print "Kierunek".rjust(10)
